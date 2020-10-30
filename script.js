@@ -25,7 +25,9 @@ function latinToRoman(number) {
     IV: 4,
     I: 1,
   };
+
   let a;
+
   if (number > 3999) return "Enter a number between 1 and 3999";
   else {
     for (let key in romanNumList) {
@@ -41,8 +43,10 @@ function latinToRoman(number) {
 
   return roman;
 }
+
 function romanToLatin(romanNumber) {
   romanNumber = romanNumber.toUpperCase();
+
   const romanNumList = [
     "CM",
     "M",
@@ -59,8 +63,10 @@ function romanToLatin(romanNumber) {
     "I",
   ];
   const corresp = [900, 1000, 400, 500, 90, 100, 40, 50, 9, 10, 4, 5, 1];
+
   let index = 0,
     num = 0;
+
   for (let rn in romanNumList) {
     index = romanNumber.indexOf(romanNumList[rn]);
     while (index != -1) {
